@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Le-Classic - Agendamentos</title>
+        <meta charset="utf-8" />
+        <meta name="author" content="Guilherme-Lopes" />
+        <meta name="keywords" content="Pilates, Pilates Clássico, agendamento, aula experimental, Brasília" />
+        <meta name="description" content="Agende sua aula de Pilates Clássico no Le Classic Pilates." />
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <img src="img/banner.png" alt="Logo Le Classic Pilates e exercício">
+        </header>
+
+        <nav id="menu">
+            <ul>
+                <li><a class="link-menu" href="index.html">HOME</a></li>
+                <li><a class="link-menu" href="index.html#pag-beneficios">BENEFÍCIOS</a></li>
+                <li><a class="link-menu" href="index.html#pag-caracteristicas">CARACTERÍSTICAS</a></li>
+                <li><a class="link-menu" href="index.html#pag-estudio">ESTÚDIO</a></li>
+                <li><a class="link-menu" href="agendamento.html">AGENDAMENTO</a></li>
+            </ul>
+        </nav>
+
+        <section id="pag-agendamento">
+            <h1>Agendamentos</h1>
+            <p>Agende uma aula experimental de Pilates Clássico!</p>
+            
+            <form name="agendamento" method="POST" action="arquivo.js">
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text" name="nome" placeholder="Digite seu nome completo" required />
+
+                <label for="email">E-mail:</label>
+                <input id="email" type="email" name="email" placeholder="nomeusuario@email.com" required />
+
+                <label for="senha">Senha:</label>
+                <input id="senha" type="password" name="senha" placeholder="somente números" required />
+
+                <label for="celular">Celular:</label>
+                <input id="celular" type="tel" name="celular" placeholder="(99)99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$" required />
+
+                <div class="grupo-inline">
+                    <div>
+                        <label for="data">Data:</label>
+                        <input id="data" type="date" name="data" />
+                    </div>
+                    <div>
+                        <label for="hora">Hora:</label>
+                        <input id="hora" type="time" name="hora" />
+                    </div>
+                    <div>
+                        <label for="aulas">Aulas/Semana:</label>
+                        <input id="aulas" type="number" name="aulas" min="1" max="10" step="1" />
+                    </div>
+                </div>
+
+                <label for="nivel">Nível:</label>
+                <select id="nivel" name="nivel">
+                    <option value="">Selecione</option>
+                    <option value="iniciante">Iniciante</option>
+                    <option value="basico">Básico</option>
+                    <option value="intermediario">Intermediário</option>
+                    <option value="avancado">Avançado</option>
+                </select>
+
+                <fieldset>
+                    <legend>Gênero:</legend>
+                    <input id="masc" type="radio" name="genero" value="masc" /> <label for="masc" class="label-inline">Masculino</label>
+                    <input id="fem" type="radio" name="genero" value="fem" /> <label for="fem" class="label-inline">Feminino</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Atividades de interesse:</legend>
+                    <input id="pila" type="checkbox" name="atividade" value="pilates" /> <label for="pila" class="label-inline">Pilates Clássico</label>
+                    <input id="solo" type="checkbox" name="atividade" value="solo" /> <label for="solo" class="label-inline">Pilates Solo</label>
+                    <input id="reab" type="checkbox" name="atividade" value="reabilitacao" /> <label for="reab" class="label-inline">Reabilitação</label>
+                    <input id="cond" type="checkbox" name="atividade" value="condicionamento" /> <label for="cond" class="label-inline">Condicionamento Físico</label>
+                </fieldset>
+
+                <label for="msg">Mensagem:</label>
+                <textarea id="msg" name="mensagem" rows="4"></textarea>
+
+                <div class="botoes">
+                    <input type="submit" name="btn-agendar" value="AGENDAR" />
+                    <input type="reset" name="btn-cancelar" value="CANCELAR" />
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <p>© Desenvolvedor Guilherme-Lopes</p>
+        </footer>
+    </body>
+</html>
